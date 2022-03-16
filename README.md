@@ -11,7 +11,7 @@ We will try to get disk I/O as fast as possible and evaluate the effects of cach
     - Add parameter for the file name;
     - Add parameter for how big the file should be (for writing);
     - Add a parameter to specify how much to read with a single call (block size);
-Way to execute: `./run <filename> [-r|-w] <block_size> <block_count`
+<br>Way to execute: `./run <filename> [-r|-w] <block_size> <block_count`</br>
 
 ### Measurement
 When measuring things it helps if they run for "reasonable" time. It is hard to measure things that run too fast as you need high-precision clocks and a lot of other things can affect the measurement. It is also annoying to wait for a long time for an experiment, especially if you have to do many experiments. For this reason you should make sure that your experiments take "reasonable" time. I recommend something between 5 and 15 seconds.
