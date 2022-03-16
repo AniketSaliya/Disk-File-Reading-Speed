@@ -20,7 +20,7 @@ When measuring things it helps if they run for "reasonable" time. It is hard to 
     - Output: file size
 <aside>
 Way to execute: './run2 <filename> <block_size>'
-💡 Hint: You can start with a small file size and use your program from (1) above to read it and measure the time it takes. You can keep doubling your file size until you get between 5 and 15 seconds.
+<br>💡 Hint: You can start with a small file size and use your program from (1) above to read it and measure the time it takes. You can keep doubling your file size until you get between 5 and 15 seconds.</br>
 
 </aside>
 
@@ -34,8 +34,8 @@ Once you have a file of "reasonable" size created, reboot your machine.
 Call your program to read the file and note the performance.
 Call your program to read the file again (immediately after) and note the performance.
 Ideally you should observe the second read be much faster, assuming the file can fit in your physical memory. This is the effect of caching.
-**NOTE: On Linux there is a way to clear the disk caches without rebooting your machine. E.g. sudo sh -c "/usr/bin/echo 3 > /proc/sys/vm/drop_caches"**
-Make a graph that shows performance for cached and non-cached reads for various block sizes.
+<br>**NOTE: On Linux there is a way to clear the disk caches without rebooting your machine. E.g. sudo sh -c "/usr/bin/echo 3 > /proc/sys/vm/drop_caches"**
+Make a graph that shows performance for cached and non-cached reads for various block sizes.</br>
 
 ### System Calls
 If you have very, very small block size (e.g. 1 byte), most of the time would be spent trapping into the kernel. We talked in class how system calls are expensive. Let's quantify it!
@@ -48,12 +48,11 @@ Try to optimize your program as much as you can to run as fast as it could.
 - Find a good enough block size?
 - Use multiple threads?
 - Report both cached and non-cached performance numbers.
-Way to execute: './fast <file_to_read>'
+<br>Way to execute: './fast <file_to_read>'</br>
 
 
 _**Example code for xor:**_
-#include <stdio.h>
-
+<br>#include <stdio.h></br>
 unsigned int xorbuf(unsigned int *buffer, int size) {
     unsigned int result = 0;
     for (int i = 0; i < size; i++) {
@@ -61,12 +60,9 @@ unsigned int xorbuf(unsigned int *buffer, int size) {
     }
     return result;
 }
-
-#define SIZE 100
-
+<br>#define SIZE 100</br>
 int main()
 {
-    
     unsigned int buffer[SIZE] = {};
     
     // random initialization
