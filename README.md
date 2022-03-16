@@ -1,3 +1,4 @@
+![Screen Shot 2022-03-15 at 9 58 54 PM](https://user-images.githubusercontent.com/53272939/158501635-05c5cfab-523e-4d12-b748-2ed6cb679235.png)
 # Disk-File-Reading-Speed
 This is the final project for **Operating Systems** and it is by its very nature quite open ended.
 The environment for this project is real Linux (I recommend a recent Ubuntu, but really any recent distribution should work). I have used C.
@@ -50,30 +51,3 @@ Try to optimize your program as much as you can to run as fast as it could.
 - Report both cached and non-cached performance numbers.
 <br>Way to execute: './fast <file_to_read>'</br>
 
-
-_**Example code for xor:**_
-
-<br>#include <stdio.h></br>
-unsigned int xorbuf(unsigned int *buffer, int size) {
-    unsigned int result = 0;
-    for (int i = 0; i < size; i++) {
-        result ^= buffer[i];
-    }
-    return result;
-}
-<br>#define SIZE 100</br>
-int main()
-{
-    unsigned int buffer[SIZE] = {};
-    // random initialization
-    for (int i = 1; i < SIZE; i++) {
-        buffer[i] = buffer[i - 1] * 31 + 17;
-    }
-    // compute xor one way...
-    printf("%08x\n", xorbuf(buffer, SIZE));
-    // compute xor another way... (as if 2 threads to half each)
-    unsigned int xor1 = xorbuf(buffer, SIZE / 2);
-    unsigned int xor2 = xorbuf(buffer + SIZE / 2, SIZE / 2);
-    printf("%08x = %08x ^ %08x\n", xor1 ^ xor2, xor1, xor2);
-    return 0;
-}
