@@ -1,4 +1,3 @@
-![Screen Shot 2022-03-15 at 9 58 54 PM](https://user-images.githubusercontent.com/53272939/158501635-05c5cfab-523e-4d12-b748-2ed6cb679235.png)
 # Disk-File-Reading-Speed
 This is the final project for **Operating Systems** and it is by its very nature quite open ended.
 The environment for this project is real Linux (I recommend a recent Ubuntu, but really any recent distribution should work). I have used C.
@@ -51,3 +50,4 @@ Try to optimize your program as much as you can to run as fast as it could.
 - Report both cached and non-cached performance numbers.
 <br>Way to execute: './fast <file_to_read>'</br>
 
+![Screen Shot 2022-03-15 at 9 58 54 PM](https://user-images.githubusercontent.com/53272939/158501635-05c5cfab-523e-4d12-b748-2ed6cb679235.png)
