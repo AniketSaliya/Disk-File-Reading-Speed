@@ -52,6 +52,7 @@ Try to optimize your program as much as you can to run as fast as it could.
 
 
 _**Example code for xor:**_
+
 <br>#include <stdio.h></br>
 unsigned int xorbuf(unsigned int *buffer, int size) {
     unsigned int result = 0;
@@ -64,19 +65,15 @@ unsigned int xorbuf(unsigned int *buffer, int size) {
 int main()
 {
     unsigned int buffer[SIZE] = {};
-    
     // random initialization
     for (int i = 1; i < SIZE; i++) {
         buffer[i] = buffer[i - 1] * 31 + 17;
     }
-    
     // compute xor one way...
     printf("%08x\n", xorbuf(buffer, SIZE));
-    
     // compute xor another way... (as if 2 threads to half each)
     unsigned int xor1 = xorbuf(buffer, SIZE / 2);
     unsigned int xor2 = xorbuf(buffer + SIZE / 2, SIZE / 2);
     printf("%08x = %08x ^ %08x\n", xor1 ^ xor2, xor1, xor2);
-    
     return 0;
 }
